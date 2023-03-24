@@ -1,54 +1,29 @@
-# Unit 10 Homework: Surf’s Up
+## Surf’s Up Climate Analysis
 
-## Before You Begin
 
-1. Create a new repository for this project called `sqlalchemy-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
-
-4. Push the changes to GitHub or GitLab.
 
 ![surfs-up.png](Images/surfs-up.png)
 
 ## Instructions
 
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following sections outline the steps you must take to accomplish this task.
+A project about trying to treat myself to a long holiday vacation in Honolulu, Hawaii! To help with my trip planning, I did some climate analysis on the area. The following sections outline the steps I took to accomplish this task.
 
 ### Part 1: Climate Analysis and Exploration
 
-In this section, you’ll use Python and SQLAlchemy to perform basic climate analysis and data exploration of your climate database. Complete the following tasks by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+In this section, I used Python and SQLAlchemy to perform basic climate analysis and data exploration of the climate database. Complete the following tasks by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
+* Used the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete my climate analysis and data exploration.
 
-* Use SQLAlchemy’s `create_engine` to connect to your SQLite database.
+* Used SQLAlchemy’s `create_engine` to connect to the SQLite database.
 
-* Use SQLAlchemy’s `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+* Used SQLAlchemy’s `automap_base()` to reflect the tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
 * Link Python to the database by creating a SQLAlchemy session.
 
-* **Important:** Don't forget to close out your session at the end of your notebook.
 
 #### Precipitation Analysis
 
-To perform an analysis of precipitation in the area, do the following:
-
-* Find the most recent date in the dataset.
-
-* Using this date, retrieve the previous 12 months of precipitation data by querying the 12 previous months of data. **Note:** Do not pass in the date as a variable to your query.
-
-* Select only the `date` and `prcp` values.
-
-* Load the query results into a Pandas DataFrame, and set the index to the date column.
-
-* Sort the DataFrame values by `date`.
-
-* Plot the results by using the DataFrame `plot` method, as shown in the following image:
-
-  ![precipitation](Images/precipitation.png)
-
-* Use Pandas to print the summary statistics for the precipitation data.
+![surfs-up.png](Images/surfs-up.png)
 
 #### Station Analysis
 
