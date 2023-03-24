@@ -2,7 +2,7 @@
 
 
 
-![surfs-up.png](Images/surfs-up.png)
+![surfs-up.png](Instructions/Images/surfs-up.png)
 
 ## Instructions
 
@@ -47,15 +47,15 @@ To perform an analysis of stations in the area, do the following:
 
     * Query the previous 12 months of temperature observation data for this station.
 
-    * Plot the results as a histogram with `bins=12`, as shown in the following image:
+    * Plotted the results as a histogram
 
-    ![station-histogram](Images/station-histogram.png)
+    ![station-histogram](Instructions/Images/station-histogram.png)
 
 * Close out your session.
 
 - - -
 
-### Part 2: Design Your Climate App
+## Climate App
 
 Now that you have completed your initial analysis, you’ll design a Flask API based on the queries that you have just developed.
 
@@ -91,91 +91,7 @@ Use Flask to create your routes, as follows:
 
     * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates from the start date through the end date (inclusive).
 
-## Hints
 
-* You will need to join the station and measurement tables for some of the queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
-
-### Bonus: Other Recommended Analyses
-
-The following are optional challenge queries that we recommend you attempt, but they are not required for this assignment.
-
-* Use the provided [temp_analysis_bonus_1_starter.ipynb](temp_analysis_bonus_1_starter.ipynb) and [temp_analysis_bonus_2_starter.ipynb](temp_analysis_bonus_2_starter.ipynb) starter notebooks for their respective bonus challenge.
-
-#### Temperature Analysis 1
-
-Conduct an analysis to answer the following question: Hawaii is reputed to enjoy mild weather all year round. Is there a meaningful difference between the temperatures in, for example, June and December?
-
-* Use Pandas to perform the following steps:
-
-    * Convert the date column format from `string` to `datetime`.
-
-    * Set the date column as the DataFrame index.
-
-    * Drop the date column.
-
-* Identify the average temperature in June at all stations across all available years in the dataset. Do the same for the temperature in December.
-
-* Use the t-test to determine whether the difference in means, if any, is statistically significant. Will you use a paired t-test or an unpaired t-test? Why?
-
-#### Temperature Analysis 2
-
-You want to take a trip from August 1 to August 7 of this year, but you are worried that the weather will be less than ideal. Using historical data in the dataset, find out what the temperature has previously been for this timeframe.
-
-**Note:** The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
-
-Complete the following steps:
-
-* Use the `calc_temps` function to calculate the minimum, average, and maximum temperatures for your trip using the matching dates from a previous year (for example, use "2017-08-01").
-
-* Plot the minimum, average, and maximum temperature from your previous query as a bar chart, as captured in the following steps and image:
-
-    * Use "Trip Avg Temp" as the title.
-
-    * Use the average temperature as the bar height (_y_ value).
-
-    * Use the peak-to-peak (TMAX-TMIN) value as the _y_ error bar (YERR).
-
-    ![temperature](Images/temperature.png)
-
-#### Daily Rainfall Average
-
-Now that you have an idea of the temperature, let’s find out what the rainfall has been. You don't want to visit if it rains the whole time! Complete the following steps:
-
-* Calculate the rainfall per weather station using the previous year's matching dates.
-
-    * Sort this in descending order by precipitation amount, and list the station, name, latitude, longitude, and elevation.
-
-### Daily Temperature Normals
-
-Calculate the daily normals for the duration of your trip. Normals are the averages for the minimum, average, and maximum temperatures.
-
-You are provided with a function called `daily_normals` that will calculate the daily normals for a specific date. This date string will be in the format `%m-%d`. Make sure to use all historic TOBS that match that date string.
-
-Complete the following steps:
-
-* Set the start and end date of the trip.
-
-* Use the date to create a range of dates.
-
-* Strip off the year, and save a list of strings in the format `%m-%d`.
-
-* Use the `daily_normals` function to calculate the normals for each date string, and append the results to a list called `normals`.
-
-* Load the list of daily normals into a Pandas DataFrame, and set the index equal to the date.
-
-* Use Pandas to plot an area plot (`stacked=False`) for the daily normals, as shown in the following image:
-
-  ![daily-normals](Images/daily-normals.png)
-
-* Close out your session.
-
-## Rubric
-
-[Unit 10 Homework Rubric](https://docs.google.com/document/d/1gT29iMF3avSvJruKpcHY4qovP5QitgXePqtjC6XESI0/edit?usp=sharing)
-
-- - -
 
 ## References
 
